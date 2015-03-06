@@ -1,9 +1,17 @@
+ul
+  li Log in to BocUK
+  li View transactions
+  li Select date periods
+  li Save in CSV format
+  li Open up downloaded file and paste here :
 form action="/convert" method="post"
   .form-group
-    label for="source_csv" Paste BoCUK CSV here :
     textarea.form-control name="source_csv" rows=20 = source_csv
   button.btn.btn-primary Convert
 
 - if target_csv
   hr
-  pre = target_csv
+  ul
+    li Create a new file, save as csv
+    li Paste the following contents :
+  code = target_csv
